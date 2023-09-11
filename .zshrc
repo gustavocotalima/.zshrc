@@ -153,5 +153,14 @@ source /opt/ros/foxy/setup.zsh
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 export CYCLONEDDS_URI=$HOME/SIRV-Simulator/install/sirv_ros/config/cyclonedds.xml
-export UE4_ROOT=$HOME/UnrealEngine
+export UE4_ROOT=$HOME/UnrealEngine4
 source $HOME/SIRV-Simulator/install/setup.zsh
+export UE5_ROOT=$HOME/UnrealEngine
+
+# pnpm
+export PNPM_HOME="/home/gustavo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
