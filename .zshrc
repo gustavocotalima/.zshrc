@@ -109,45 +109,13 @@ SPACESHIP_PROMPT_ORDER=(
   hg            # Mercurial section (hg_branch  + hg_status)
   package        # Package version
   node           # Node.js section
-  bun            # Bun section
-  deno           # Deno section
-  ruby           # Ruby section
-  python         # Python section
-  elm            # Elm section
-  elixir         # Elixir section
-  xcode          # Xcode section
-  swift          # Swift section
-  golang         # Go section
-  perl           # Perl section
-  php            # PHP section
-  rust           # Rust section
-  haskell        # Haskell Stack section
-  scala          # Scala section
-  kotlin         # Kotlin section
-  java           # Java section
-  lua            # Lua section
-  dart           # Dart section
-  julia          # Julia section
-  crystal        # Crystal section
   docker         # Docker section
   docker_compose # Docker section
   aws            # Amazon Web Services section
   gcloud         # Google Cloud Platform section
   azure          # Azure section
   venv           # virtualenv section
-  conda          # conda virtualenv section
   dotnet         # .NET section
-  ocaml          # OCaml section
-  vlang          # V section
-  zig            # Zig section
-  purescript     # PureScript section
-  erlang         # Erlang section
-  kubectl        # Kubectl context section
-  ansible        # Ansible section
-  terraform      # Terraform workspace section
-  pulumi         # Pulumi stack section
-  ibmcloud       # IBM Cloud section
-  nix_shell      # Nix shell
   gnu_screen     # GNU Screen section
   exec_time     # Execution time
   line_sep      # Line break
@@ -190,16 +158,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
 
-### ROS/UE CONFIGURATION ###
-
-source /opt/ros/foxy/setup.zsh
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-
-export CYCLONEDDS_URI=$HOME/SIRV-Simulator/install/sirv_ros/config/cyclonedds.xml
-export UE4_ROOT=$HOME/UnrealEngine4
-source $HOME/SIRV-Simulator/install/setup.zsh
-export UE5_ROOT=$HOME/UnrealEngine
-
 # pnpm
 export PNPM_HOME="/home/gustavo/.local/share/pnpm"
 case ":$PATH:" in
@@ -207,4 +165,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+alias c="code-insiders"
